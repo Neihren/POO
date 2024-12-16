@@ -141,17 +141,17 @@ public class Bouteille implements Cloneable {
         if (estOuvert == false) {
             System.out.println("La bouteille doit déjà être ouverte");
             return false;
-        // Vérifie si la bouteille n'est pas déjà vide
+            // Vérifie si la bouteille n'est pas déjà vide
         } else if (contenuEnPourcentage == 0f) {
             System.out.println("La bouteille est déjà vide");
             return false;
-        // Vérifie si l'on ne tente pas de vidé plus que le contenu de la bouteille    
+            // Vérifie si l'on ne tente pas de vidé plus que le contenu de la bouteille
         } else if (contenuEnPourcentage - pourcentageAVider < 0f) {
             System.out.println("La bouteille n'est remplie qu'à " + contenuEnPourcentage
                     + "%, impossible de la vider de " + pourcentageAVider + "%");
             return false;
         } else {
-        // Vide la bouteille
+            // Vide la bouteille
             this.contenuEnPourcentage = contenuEnPourcentage - pourcentageAVider;
             // Si la bouteille est maintenant vide
             if (contenuEnPourcentage == 0f) {
@@ -170,11 +170,11 @@ public class Bouteille implements Cloneable {
         if (estOuvert == false) {
             System.out.println("La bouteille doit déjà être ouverte");
             return false;
-        // Si la bouteille est déjà pleine, empêche le remplissage
+            // Si la bouteille est déjà pleine, empêche le remplissage
         } else if (contenuEnPourcentage == 100f) {
             System.out.println("La bouteille est déjà pleine");
             return false;
-        // Remplie la bouteille
+            // Remplie la bouteille
         } else {
             this.contenuEnPourcentage = 100f;
             System.out.println("La bouteille est maintenant pleine");
@@ -182,23 +182,22 @@ public class Bouteille implements Cloneable {
         }
     }
 
-    
     // Méthode vider()
     public boolean remplir(float pourcentageARemplir) {
         // Vérifie si la bouteille est bien ouverte
         if (estOuvert == false) {
             System.out.println("La bouteille doit déjà être ouverte");
             return false;
-        // Vérifie si la bouteille n'est pas déjà pleine
+            // Vérifie si la bouteille n'est pas déjà pleine
         } else if (contenuEnPourcentage == 100f) {
             System.out.println("La bouteille est déjà pleine");
             return false;
-        // Vérifie si l'on ne tente pas de trop remplir la bouteille
+            // Vérifie si l'on ne tente pas de trop remplir la bouteille
         } else if (contenuEnPourcentage + pourcentageARemplir > 100f) {
             System.out.println("La bouteille est déjà remplie à " + contenuEnPourcentage
                     + "%, impossible de la remplir de " + pourcentageARemplir + "%");
             return false;
-        // Remplie la bouteille
+            // Remplie la bouteille
         } else {
             this.contenuEnPourcentage = contenuEnPourcentage + pourcentageARemplir;
             if (contenuEnPourcentage == 100f) {
