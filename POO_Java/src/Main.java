@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) throws Exception {
         
@@ -10,23 +11,34 @@ public class Main {
         
         // Affichage des etats de l'objet b1 avec la méthode toString()
         System.out.println(b1.toString());
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
         
         // Fermeture de l'objet b1 avec la méthode fermer()
         b1.fermer();
-
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
         // Ouverture de l'objet b1 avec la méthode ouvrir()
         b1.ouvrir();
-
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
         // Remplissage de l'objet b1 avec la méthode remplir()
         b1.remplir();
-
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
         // Vidage de l'objet b1 avec la méthode vider()
         b1.vider();
-
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
         // Remplissage partiel de l'objet b1 avec la méthode remplir(float pourcentageARemplir)
         b1.remplir(50);
-
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
         // Vidage partiel de l'objet b1 avec la méthdode vider(float pourcentageAVider)
         b1.vider(20);
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+        
+        // Bonus affichage de la bouteille
+        display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
+
     }
 }
