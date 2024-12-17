@@ -16,11 +16,7 @@ public class display {
         String emptyLine;
         String fullLine;
         String fullBottom;
-        int nbEmptyLine;
-        int nbFullLine;
 
-        nbFullLine = 0;
-        nbEmptyLine = 19;
         emptyLine = "     |                     |\r\n";
 
         fullLine =  "     |\u001B[44m                     \u001B[0m|\r\n";
