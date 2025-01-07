@@ -49,6 +49,7 @@ public class Voiture {
     public void demarrer() {
         if (contact == false) {
             this.contact = true;
+            this.moteur = true;
             System.out.println("La voiture est mainteant démarrée");
         } else {
             System.out.println("La voiture est déjà démarrée");
@@ -58,6 +59,7 @@ public class Voiture {
     public void stopper() {
         if (contact == true) {
             this.contact = false;
+            this.moteur = false;
             System.out.println("La voiture est maintenant à l'arrêt");
         } else {
             System.out.println("La voiture est déjà à l'arrêt");
@@ -65,7 +67,7 @@ public class Voiture {
     }
 
     public void avancer() {
-        if (contact == true) {
+        if (moteur == true && contact == true) {
             this.frein = false;
             this.accelerateur = true;
             System.out.println("La voiture avance");
@@ -75,7 +77,7 @@ public class Voiture {
     }
     
     public void ralentir() {
-        if (contact == false) {
+        if (moteur == true && contact == true) {
             this.accelerateur = false;
             this.frein = true;
             System.out.println("La voiture freine");
