@@ -9,6 +9,9 @@ public class Bouteille implements Cloneable {
 
     // Constructeur par defaut
     public Bouteille() {
+        this.estOuvert = false;
+        this.contenanceEnML = 100;
+        this.contenuEnPourcentage = 100;
     }
 
     // Constructeur classique
@@ -19,7 +22,13 @@ public class Bouteille implements Cloneable {
         this.contenuEnPourcentage = contenuEnPourcentage;
     }
 
-    // Constructeur par clonage
+    public Bouteille(Bouteille bouteilleACloner) {
+        this.estOuvert = bouteilleACloner.estOuvert;
+        this.contenanceEnML = bouteilleACloner.contenanceEnML;
+        this.contenuEnPourcentage = bouteilleACloner.contenuEnPourcentage;
+    }
+
+    // Autre constructeur par clonage
     public Object clone() {
         Object o = null;
         try {
