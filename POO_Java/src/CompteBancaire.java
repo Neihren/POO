@@ -61,11 +61,11 @@ public class CompteBancaire {
         }
     }
 
-    public boolean transfer(CompteBancaire accountToTransferTo, double amountToTransfer) {
+    public boolean transfer(CompteBancaire beneficiary, double amountToTransfer) {
         boolean result;
         result = this.debit(amountToTransfer);
         if (result) {
-            accountToTransferTo.credit(amountToTransfer);
+            beneficiary.credit(amountToTransfer);
         }
         return result;
     }
