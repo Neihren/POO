@@ -1,4 +1,4 @@
-public class Voiture {
+public class Voiture implements Cloneable {
 
     private String marque;
     private int annee;
@@ -46,16 +46,19 @@ public class Voiture {
                 + ", frein=" + frein + "]";
     }
 
-    public void demarrer() {
+    public boolean demarrer() {
         if (contact == true) {
             if (moteur == false) {
-                 this.moteur = true;
-            System.out.println("La voiture est mainteant démarrée");
+                this.moteur = true;
+                System.out.println("La voiture est mainteant démarrée");
+                return true;
             } else {
             System.out.println("La voiture est déjà démarrée");
+            return false;
             }
         } else {
             System.out.println("Il n'y a pas le contact");
+            return false;
         }
     }
 
