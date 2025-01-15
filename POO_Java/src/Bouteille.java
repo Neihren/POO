@@ -22,6 +22,7 @@ public class Bouteille implements Cloneable {
         this.contenuEnPourcentage = contenuEnPourcentage;
     }
 
+    // Constructeur par clonage
     public Bouteille(Bouteille bouteilleACloner) {
         this.estOuvert = bouteilleACloner.estOuvert;
         this.contenanceEnML = bouteilleACloner.contenanceEnML;
