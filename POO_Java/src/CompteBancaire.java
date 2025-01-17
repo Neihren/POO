@@ -41,6 +41,14 @@ public class CompteBancaire {
         return result;
     }
 
+    public int getId() {
+        return this.id;
+    }
+
+    public double getBalance() {
+        return this.balance;
+    }
+    
     public void credit(double amountToCredit) {
         System.out.println("\nSolde [" + this.id + "]: " + this.balance);
         this.balance += amountToCredit;
