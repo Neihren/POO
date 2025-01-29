@@ -96,6 +96,7 @@ public class AccountList {
     }
 
     public boolean logIn() {
+        Console console = System.console();
         String username;
         String password;
         String logInMessage;
@@ -104,7 +105,7 @@ public class AccountList {
             System.out.print("Nom Utilisateur : ");
             username = sc.nextLine();
             System.out.print("Mot de passe : ");
-            password = sc.nextLine();
+            password = new String(console.readPassword("Mot de passe : "));
             Account account = getAccount(username);
             try {
                 if (account.getPassword().equals(password)) {
