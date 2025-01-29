@@ -1,7 +1,8 @@
 public class FractionMain {
     public static void main(String[] args) {
-        Fraction f1 = new Fraction(8,7);
+        Fraction f1 = new Fraction(16,24);
         System.out.println(f1);
+        System.out.println("pgcd" + f1.getPgcd());
         Fraction f2 = new Fraction();
         System.out.println(f2);
         Fraction f3 = new Fraction(9);
@@ -21,5 +22,10 @@ public class FractionMain {
         System.out.println(f7);
         f7.divise(f1, f5);
         System.out.println(f7);
+        Fraction f8 = new Fraction(10,5);
+        Fraction f9 = new Fraction(10, 5);
+        Fraction f10 = new Fraction();
+        f10.plus(f8, f9);
+        System.out.println(f10);
     }
 }

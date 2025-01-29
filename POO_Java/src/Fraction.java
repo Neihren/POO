@@ -68,7 +68,7 @@ public class Fraction {
         }
     }
 
-    private int getPgcd() {
+    public int getPgcd() {
         int a = this.numerator;
         int b = this.denominator;
         int pgcd = 1;
