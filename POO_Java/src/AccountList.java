@@ -104,7 +104,6 @@ public class AccountList {
             System.out.println("\nPour vous connecter, entrez");
             System.out.print("Nom Utilisateur : ");
             username = sc.nextLine();
-            System.out.print("Mot de passe : ");
             password = new String(console.readPassword("Mot de passe : "));
             Account account = getAccount(username);
             try {
